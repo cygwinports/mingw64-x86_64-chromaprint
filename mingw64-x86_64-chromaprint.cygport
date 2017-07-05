@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross cmake
 
 NAME="mingw64-x86_64-chromaprint"
-VERSION=1.2
+VERSION=1.4.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Audio fingerprinting library for Win64 toolchain"
@@ -14,4 +14,4 @@ SRC_URI="https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-${VERS
 SRC_DIR="chromaprint-${VERSION}"
 
 # ffmpeg is a bit much just for FFT
-CYGCMAKE_ARGS="-DWITH_FFTW3=YES"
+CYGCMAKE_ARGS="-DFFT_LIB=fftw3"
